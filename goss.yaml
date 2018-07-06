@@ -21,6 +21,6 @@ process:
   nginx:
     running: true
 http:
-  http://localhost
-    status: 200
+  http://localhost:
+    #status: 200
     timeout: 5000
