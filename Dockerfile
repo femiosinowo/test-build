@@ -1,3 +1,8 @@
+# Set nginx base image
 FROM nginx
-COPY hello /
-CMD ["/hello"]
+
+# File Author / Maintainer
+MAINTAINER Olufemi Osinowo
+
+# Copy custom configuration file from the current directory
+COPY nginx.conf /etc/nginx/nginx.conf
