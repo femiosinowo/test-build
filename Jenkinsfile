@@ -11,16 +11,12 @@ node ("docker"){
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("testbuild/hellonode")
+        app = docker.build("tese/nginx:v1")
     }
 
+    
     stage('Test image') {
-        /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Volkswagen-type approach ;-) */
-
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
+      sh 'export GOSS_FILES_STRATEGY=cp && /usr/local/bin/dgoss  run --name jenkins-docker-dgoss-test --rm -ti tese/nginx:v1'
     }
 
     stage('Push image') {
