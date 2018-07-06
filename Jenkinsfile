@@ -16,7 +16,7 @@ node ("docker"){
 
     
     stage('Test image') {
-      sh 'export GOSS_FILES_STRATEGY=cp && /usr/local/bin/dgoss  run -p 80:80 --name dgoss-test --rm -ti tese/nginx:v1'
+      sh 'export GOSS_FILES_STRATEGY=cp && /usr/local/bin/dgoss  run -p 80 --name dgoss-test --rm -ti tese/nginx:v1'
     }
 
     stage('Push image') {
