@@ -11,7 +11,7 @@ package:
   nginx:
     installed: true
     versions:
-    - 1.11.10-1~jessie
+    - 1.15.1-1~stretch
 port:
   tcp:80:
     listening: true
@@ -24,5 +24,3 @@ http:
   http://localhost:
     status: 200
     timeout: 5000
-    body:
-    - Welcome to nginx!
