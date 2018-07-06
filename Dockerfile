@@ -1,3 +1,3 @@
-FROM scratch
+FROM nginx
 COPY hello /
 CMD ["/hello"]
