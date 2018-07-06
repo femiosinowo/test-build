@@ -22,5 +22,5 @@ process:
     running: true
 http:
   http://localhost:
-    #status: 200
+    status: 404
     timeout: 5000
